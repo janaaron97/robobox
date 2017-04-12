@@ -1,6 +1,9 @@
+<div class="jumbotron create-folder">
+	<center><%= link_to "Create Folder", new_folder_path, class: 'btn btn-success'  %></center>
+</div>
+
 <div class="jumbotron">
 	<div class="container">
-	<%= link_to "Create Folder", new_folder_path, class: 'btn btn-success'  %><br /><br />
 		<% @folders.each do |folder| %>
 			<div class="col-md-3 folder-item">
 				<i class="fa fa-folder"></i>
