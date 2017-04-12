@@ -1,0 +1,10 @@
+<div class="jumbotron">
+	<div class="container">
+	<%= link_to "Create Folder", new_folder_path, class: 'btn btn-success'  %><br /><br />
+		<% @folders.each do |folder| %>
+			<%= folder.name %><br>
+			<%= link_to "See Folder", folder_path(folder.id) %><br /><br />
+		<% end %>
+		</div>
+	</div>
+</div>
