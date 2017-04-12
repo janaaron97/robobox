@@ -5,7 +5,7 @@
 	<% @folder.photos.each do |photo| %>
 		<div class="image-holder">
 			<%= image_tag photo.avatar.url, class: 'hi' %><br />
-			<p>http://robobox.herokuapp.com<%= photo.avatar.url %></p><br />
+			<p><%= photo.avatar.url %></p><br />
 		</div>
 	<% end %>
 </div>

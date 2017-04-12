@@ -53,6 +53,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
 config.paperclip_defaults = {
+  s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com",
   storage: :s3,
   s3_credentials: {
     bucket: ENV.fetch('S3_BUCKET_NAME'),
