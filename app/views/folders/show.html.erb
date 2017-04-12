@@ -5,13 +5,11 @@
 	<% @folder.photos.each do |photo| %>
 		<div class="image-holder">
 			<%= image_tag photo.avatar.url, class: 'hi' %><br />
-			<p><%= photo.avatar.url %></p><br />
+			<div class="url"><p><%= photo.avatar.url %></p></div><br />
 			<%= link_to "Delete Photo", [photo.folder, photo], method: :delete, class: 'button', data: {confirm: "Are You Sure?"}  %>
 		</div>
 	<% end %>
 </div>
-
-<h2>Add Content:</h2>
 
 <%= form_for([@folder, @folder.photos.build]) do |f| %>
 	<%= f.file_field :avatar %>
