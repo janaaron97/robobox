@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'aws-sdk', '~> 2.3'
 gem 'rails', '~> 5.0.2'
 gem 'sqlite3', group: :development
 gem 'pg', '0.18.1', group: :production
