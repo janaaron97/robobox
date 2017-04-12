@@ -2,8 +2,11 @@
 	<div class="container">
 	<%= link_to "Create Folder", new_folder_path, class: 'btn btn-success'  %><br /><br />
 		<% @folders.each do |folder| %>
-			<%= folder.name %><br>
-			<%= link_to "See Folder", folder_path(folder.id) %><br /><br />
+			<div class="col-md-3 folder-item">
+				<i class="fa fa-folder"></i>
+				<p><%= folder.name %></p>
+				<%= link_to "See Folder", folder_path(folder.id) %><br /><br />
+			</div>
 		<% end %>
 		</div>
 	</div>
